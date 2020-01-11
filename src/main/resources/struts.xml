@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<constant name="struts.devMode" value="true"></constant>
+    <package name="hzw" extends="struts-default">
+        <action name="CheckAction" class="control.CheckLogin">
+            <result name="success">/Index/Transit.jsp</result>
+            <result name="error">/Index/Err.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
+
+      <action name="setup" class="control.SetUp">
+        <result name="success">/LoginSuc.jsp</result>
+        <result name="error">/Res/Err.jsp</result>
+          <result name="input">/Login.jsp</result>
+    </action>
+
+        <action name="updatepassword" class="control.Normal.UpdatePassword">
+            <result name="success">/Res/Suc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+
+
+        <action name="normaladd" class="control.Normal.NormalAdd">
+            <result name="success">/Res/Suc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+
+        <action name="normalshowone" class="control.Normal.NormalShowOne">
+            <result name="success">/Normal/NormalUpdate.jsp</result>
+        </action>
+
+
+
+
+
+        <action name="show" class="control.Normal.NormalShow">
+            <result name="success">/Normal/NormalShowSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="del" class="control.Normal.NormalDelete">
+            <result name="success">/Res/Suc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="NormalUpdate" class="control.Normal.NormalUpdate">
+            <result name="success">/Normal/NormalUpdateSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+
+        <action name="AdminUpdate" class="control.Normal.NormalUpdate">
+            <result name="success">/Normal/AdminUpdateSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+
+
+        <action name="admininforshow" class="control.Infor.AdminInforShow">
+            <result name="success">/Normal/AdminInforShowSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+
+        <action name="inforbuy" class="control.Infor.InforBuy">
+            <result name="success">/Res/Suc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="inforshop" class="control.Infor.InforShop">
+            <result name="success">/Res/Suc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="inforshopshow" class="control.Infor.InforShopShow">
+            <result name="success">/Infor/InforShopShowSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="inforshopbuy" class="control.Infor.InforShopBuy">
+            <result name="success">/Infor/InforShopShow.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+
+        <action name="inforshopclear" class="control.Infor.InforShopClear">
+            <result name="success">/Infor/InforShopShow.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+
+        <action name="inforshow" class="control.Infor.InforShowAll">
+            <result name="success">/InforAllShowSuc</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="showbypage" class="control.Infor.InforShow">
+            <result name="success">/InforShowSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="selectbyid" class="control.InforSelect.InforSelectByid">
+            <result name="success">/InforSelect/InforSelectByidSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="selectbytype" class="control.InforSelect.InforSelectBytype">
+            <result name="success">/InforSelect/InforSelectBytypeSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="selectbyfix" class="control.InforSelect.InforSelectByfix">
+            <result name="success">/InforSelect/InforSelectByfixSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="selectbyshop" class="control.InforSelect.InforSelectByShop">
+            <result name="success">/InforSelect/InforSelectByShopSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="buyshop" class="control.Infor.BuyShop">
+            <result name="success">/Res/Suc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+
+
+        <action name="infordelete" class="control.Infor.InforDelete">
+            <result name="success">/Infor/InforDeleteSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="inforupdate" class="control.Infor.InforUpdate">
+            <result name="success">/Infor/InforUpdateSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="inforadd" class="control.Infor.InforAdd">
+            <result name="success">/Infor/InforAddSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="inforshow" class="control.Infor.InforShowAll">
+            <result name="success">/InforAllShowSuc.jsp</result>
+            <result name="error">/Res/Err.jsp</result>
+        </action>
+
+        <action name="bunding" class="control.Bunding">
+            <result name="success">/Index/ViewNormal.jsp</result>
+        </action>
+
+    </package>
+</struts>

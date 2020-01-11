@@ -1,0 +1,12 @@
+.idea
+.gradle
+classes
+out
+*.jar
+*.class
+build
+# hsqldb temp file
+test.lck
+test.properties
+test.log
+jee2019*.*

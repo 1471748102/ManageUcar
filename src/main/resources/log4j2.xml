@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="info">
+    <properties>
+        <!-- ${web:rootDir} ${sys:catalina.home}-->
+        <property name="log.home" value="."/>
+        <property name="prj.name">jee2019</property>
+        <property name="pattern">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level-%l{36}-%msg%n</property>
+    </properties>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${pattern}"/>
+        </Console>
+        <File name="file" fileName="${log.home}/${prj.name}.log" append="false">
+            <PatternLayout pattern="${pattern}"/>
+        </File>
+        <File name="error" fileName="${log.home}/${prj.name}-error.log" append="false">
+            <ThresholdFilter level="error" onMatch="ACCEPT"
+                             onMismatch="DENY"/>
+            <PatternLayout pattern="${pattern}"/>
+        </File>
+        <RollingFile name="rollingFile" fileName="${log.home}/${prj.name}.txt"
+                     filePattern="${log.home}/${prj.name}-%d{yyyyMMdd}-%i.gz">
+            <PatternLayout pattern="${pattern}"/>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="200KB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <logger name="c" level="debug" additivity="false">
+            <appender-ref ref="console"/>
+        </logger>
+        <logger name="demo" level="debug"/>
+        <logger name="com.apache.struts2" level="info"/>
+        <Root level="info">
+            <appenderRef ref="console"/>
+            <appenderRef ref="file"/>
+            <appenderRef ref="error"/>
+        </Root>
+    </Loggers>
+</configuration>
